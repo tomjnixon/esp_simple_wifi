@@ -1,0 +1,9 @@
+menu "simple wifi"
+
+    config SIMPLE_WIFI_SSID
+        string "ssid"
+
+    config SIMPLE_WIFI_PASSWORD
+        string "password"
+
+endmenu
