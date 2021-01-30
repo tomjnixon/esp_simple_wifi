@@ -55,6 +55,9 @@ void simple_wifi::start() {
   memset(&wifi_config, 0, sizeof(wifi_config));
   memcpy(wifi_config.sta.ssid, ssid, strlen(ssid));
   memcpy(wifi_config.sta.password, password, strlen(password));
+  wifi_config.sta.threshold.authmode = WIFI_AUTH_WPA2_PSK;
+  wifi_config.sta.pmf_cfg.capable = true;
+  wifi_config.sta.pmf_cfg.required = false;
 
   ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_STA));
   ESP_ERROR_CHECK(esp_wifi_set_config(ESP_IF_WIFI_STA, &wifi_config));
