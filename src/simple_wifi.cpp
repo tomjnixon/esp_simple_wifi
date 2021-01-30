@@ -64,6 +64,5 @@ void simple_wifi::start() {
   ESP_ERROR_CHECK(esp_wifi_set_ps(WIFI_PS_NONE));
   ESP_ERROR_CHECK(esp_wifi_start());
 
-  ESP_LOGI(TAG, "wifi_init_sta finished.");
-  ESP_LOGI(TAG, "connect to ap");
+  ESP_LOGI(TAG, "start finished");
 }
