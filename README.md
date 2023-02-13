@@ -71,6 +71,8 @@ These limitations could be resolved; open an issue / PR:
 
 - API is only usable from C++, not C.
 
+- Reconnection is not very sophisticated -- it's generally reliable, though.
+
 ## License
 
 Licensed under GNU Affero General Public License v3.0. See `LICENSE`.
