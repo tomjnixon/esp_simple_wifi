@@ -6,4 +6,12 @@ menu "simple wifi"
     config SIMPLE_WIFI_PASSWORD
         string "password"
 
+    config SIMPLE_WIFI_FIX_BSSID
+        bool "only connect to the specified bssid"
+        default n
+
+    config SIMPLE_WIFI_BSSID
+        string "the BSSID to connect to"
+        depends on SIMPLE_WIFI_FIX_BSSID
+
 endmenu
